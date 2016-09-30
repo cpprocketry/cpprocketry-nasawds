@@ -30,9 +30,9 @@ $font-bold:           700 !default;
 $image-path:           '../img' !default;
 
 // Color
-$color-primary:              #0071bc !default;
-$color-primary-darker:       #205493 !default;
-$color-primary-darkest:      #112e51 !default;
+$color-primary:              #105bd8 !default;
+$color-primary-darker:       #1d4893 !default; //#164493 !default;
+$color-primary-darkest:      #112951 !default;
 
 $color-primary-alt:          #02bfe7 !default;
 $color-primary-alt-darkest:  #046b99 !default;
@@ -40,18 +40,18 @@ $color-primary-alt-dark:     #00a6d2 !default;
 $color-primary-alt-light:    #9bdaf1 !default; // lighten($color-primary-alt, 60%)
 $color-primary-alt-lightest: #e1f3f8 !default; // lighten($color-primary-alt, 90%)
 
-$color-secondary:            #e31c3d !default;
-$color-secondary-darkest:    #981b1e !default;
-$color-secondary-dark:       #cd2026 !default;
-$color-secondary-light:      #e59393 !default; // lighten($color-secondary, 60%)
-$color-secondary-lightest:   #f9dede !default; // lighten($color-secondary, 90%)
+$color-secondary:            #e2371d !default;
+$color-secondary-darkest:    #99231b !default;
+$color-secondary-dark:       #cc2e20 !default;
+$color-secondary-light:      #e59892 !default; // lighten($color-secondary, 60%)
+$color-secondary-lightest:   #f9e0de !default; // lighten($color-secondary, 90%)
 
 $color-white:                #ffffff !default;
 $color-base:                 #212121 !default;
 $color-black:                #000000 !default;
 
-$color-gray-dark:            #323a45 !default;
-$color-gray:                 #5b616b !default; // lighten($color-gray-dark, 20%)
+$color-gray-dark:            #313744 !default;
+$color-gray:                 #5b606b !default; // lighten($color-gray-dark, 20%)
 $color-gray-medium:          #757575 !default; // lightest gray that passes color contrast
 $color-gray-light:           #aeb0b5 !default; // lighten($color-gray-dark, 60%)
 $color-gray-lighter:         #d6d7d9 !default; // lighten($color-gray-dark, 80%)
