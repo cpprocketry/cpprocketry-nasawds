@@ -33,7 +33,7 @@
   "homepage": "https://github.com/18F/web-design-standards#readme",
   "dependencies": {
     "bourbon": "^4.2.6",
-    "bourbon-neat": "^1.7.3",
+    "bourbon-neat": "github:thoughtbot/neat#neat-1.8.0-node-sass",
     "classlist-polyfill": "^1.0.3",
     "cross-spawn": "^2.1.5",
     "jquery": "^2.2.0",
@@ -42,7 +42,7 @@
     "prismjs": "^1.5.1"
   },
   "devDependencies": {
-    "@18f/stylelint-rules": "^1.0.1",
+    "@18f/stylelint-rules": "^1.2.0",
     "browserify": "^13.0.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
