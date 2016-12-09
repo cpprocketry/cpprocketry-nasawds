@@ -13,7 +13,7 @@ var runSequence = require('run-sequence');
 var del = require('del');
 var task = 'sass';
 
-var entryFileFilter = filter('uswds.scss', { restore: true });
+var entryFileFilter = filter('nasawds.scss', { restore: true });
 var normalizeCssFilter = filter('normalize.css', { restore: true });
 var supportedBrowsers = [
   '> 1%',
@@ -58,11 +58,11 @@ gulp.task(task, [ /* 'stylelint' */ ], function (done) {
 
   dutil.logMessage(task, 'Compiling Sass');
 
-  var entryFile = 'src/stylesheets/uswds.scss';
+  var entryFile = 'src/stylesheets/nasawds.scss';
 
   var replaceVersion = replace(
-    /\buswds @version\b/g,
-    'uswds v' + pkg.version
+    /\bnasawds @version\b/g,
+    'nasawds v' + pkg.version
   );
 
   var defaultStream = gulp.src(entryFile)

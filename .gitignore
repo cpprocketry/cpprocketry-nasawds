@@ -16,3 +16,4 @@ src/stylesheets/lib
 
 .netbeans.xml
 scss-lint.yml
+.bundle/
