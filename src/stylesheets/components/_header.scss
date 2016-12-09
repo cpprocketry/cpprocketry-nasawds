@@ -302,14 +302,14 @@ $z-index-nav:     9000;
       background-size: 1rem;
 
       @include media($nav-width) {
-        background-color: $color-primary-darkest;
+        background-color: $color-gray-dark;
         color: $color-white;
         background-image: url('#{$image-path}/angle-arrow-down-hover.png');
         background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
         background-position: right 1.5rem top 44%;
 
         &:hover {
-          background-color: $color-primary-darkest;
+          background-color: $color-gray-dark;
         }
 
         span {
@@ -505,7 +505,7 @@ $z-index-nav:     9000;
   @include media($nav-width) {
     @include unstyled-list;
     @include padding(1.15rem null);
-    background-color: $color-primary-darkest;
+    background-color: $color-gray-dark;
     min-width: 21.5rem;
     width: auto;
     position: absolute;
@@ -523,7 +523,7 @@ $z-index-nav:     9000;
 
     &:hover {
       @include media($nav-width) {
-        background-color: $color-primary-darkest;
+        background-color: $color-gray-dark;
         color: $color-white;
         text-decoration: underline;
       }
@@ -566,7 +566,7 @@ $z-index-nav:     9000;
 }
 
 @mixin outer-megamenu {
-  background-color: $color-primary-darkest;
+  background-color: $color-gray-dark;
   content: '';
   display: block;
   height: 100%;

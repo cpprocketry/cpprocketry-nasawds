@@ -1,7 +1,7 @@
 {
-  "name": "uswds",
+  "name": "nasawds",
   "version": "0.13.3",
-  "description": "Open source UI components and visual style guide for U.S. government websites",
+  "description": "Open source UI components and visual style guide for NASA websites",
   "main": "src/js/start.js",
   "scripts": {
     "prepublish": "gulp copy-vendor-sass && gulp build",
@@ -15,22 +15,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/18F/web-design-standards.git"
+    "url": "git+https://github.com/bruffridge/web-design-standards.git"
   },
-  "author": "18F",
+  "author": "18F + NASA",
   "contributors": [
     "Maya Benari <maya.ben-ari@gsa.gov>",
     "Marco Segreto <marco.segreto@gsa.gov>",
     "Jeremia Kimelman <jeremia.kimelman@gsa.gov>",
     "Roger Steve Ruiz <roger.ruiz@gsa.gov>",
     "Julia Elman <julia.elman@gsa.gov>",
-    "Shawn Allen <shawn.allen@gsa.gov>"
+    "Shawn Allen <shawn.allen@gsa.gov>",
+    "Brandon Ruffridge <bruffridge@nasa.gov>"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/18F/web-design-standards/issues"
+    "url": "https://github.com/bruffridge/web-design-standards/issues"
   },
-  "homepage": "https://github.com/18F/web-design-standards#readme",
+  "homepage": "https://github.com/bruffridge/web-design-standards#readme",
   "dependencies": {
     "bourbon": "^4.2.6",
     "bourbon-neat": "^1.7.3",

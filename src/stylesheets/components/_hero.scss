@@ -14,12 +14,12 @@
 
 .usa-section-dark {
   .usa-hero-link {
-    color: $color-primary-alt;
+    color: $color-primary-alt-light;
   }
 }
 
 .usa-hero-callout {
-  background-color: $color-primary-darkest;
+  background-color: $color-base;
   padding: 3rem;
 
   @include media($small-screen) {
