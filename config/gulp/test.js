@@ -4,7 +4,11 @@ var runSequence = require('run-sequence');
 
 gulp.task('test', function () {
   return gulp.src('spec/**/*.spec.js')
-    .pipe(mocha());
+    .pipe(mocha({
+      require: [
+        'jsdom-global/register'
+      ]
+    }));
 });
 
 
@@ -12,7 +16,6 @@ gulp.task('test:watch', function () {
   gulp.watch([
     'spec/**/*.spec.js',
     'src/js/**/*.js',
-    'docs/doc_assets/js/**/*.js',
   ], function (event) {
     runSequence(
       'test'
