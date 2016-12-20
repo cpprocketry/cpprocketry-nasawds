@@ -41,7 +41,7 @@ describe('build output', function () {
 });
 
 describe('version output', function () {
-  var versionString = '/*! nasawds v' + pkg.version + ' */';
+  var versionString = '/*! uswds v' + pkg.version + ' */';
 
   var checkVersion = function (filename, done) {
     fs.readFile(filename, function (error, buffer) {
