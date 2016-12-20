@@ -22,16 +22,16 @@ before(function (done) {
 
 describe('build output', function () {
 
-  it('generates CSS at dist/css/uswds.css', function () {
-    var distFilename = path.join(distPath, 'uswds.css');
+  it('generates CSS at dist/css/nasawds.css', function () {
+    var distFilename = path.join(distPath, 'nasawds.css');
     assert.ok(
       fs.existsSync(distFilename),
       'the file does not exist: ' + distFilename
     );
   });
 
-  it('generates minified CSS at dist/css/uswds.min.css', function () {
-    var distFilename = path.join(distPath, 'uswds.min.css');
+  it('generates minified CSS at dist/css/nasawds.min.css', function () {
+    var distFilename = path.join(distPath, 'nasawds.min.css');
     assert.ok(
       fs.existsSync(distFilename),
       'the file does not exist: ' + distFilename
@@ -41,7 +41,7 @@ describe('build output', function () {
 });
 
 describe('version output', function () {
-  var versionString = '/*! uswds v' + pkg.version + ' */';
+  var versionString = '/*! nasawds v' + pkg.version + ' */';
 
   var checkVersion = function (filename, done) {
     fs.readFile(filename, function (error, buffer) {
@@ -56,13 +56,13 @@ describe('version output', function () {
     });
   };
 
-  it('includes the current version text in uswds.css', function (done) {
-    var distFilename = path.join(distPath, 'uswds.css');
+  it('includes the current version text in nasawds.css', function (done) {
+    var distFilename = path.join(distPath, 'nasawds.css');
     checkVersion(distFilename, done);
   });
 
-  it('includes the current version text in uswds.min.css', function (done) {
-    var distFilename = path.join(distPath, 'uswds.min.css');
+  it('includes the current version text in nasawds.min.css', function (done) {
+    var distFilename = path.join(distPath, 'nasawds.min.css');
     checkVersion(distFilename, done);
   });
 
