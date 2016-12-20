@@ -57,8 +57,8 @@ gulp.task(task, [ 'stylelint' ], function (done) {
   var entryFile = 'src/stylesheets/nasawds.scss';
 
   var replaceVersion = replace(
-    /\buswds @version\b/g,
-    'uswds v' + pkg.version
+    /\bnasawds @version\b/g,
+    'nasawds v' + pkg.version
   );
 
   var defaultStream = gulp.src(entryFile)
