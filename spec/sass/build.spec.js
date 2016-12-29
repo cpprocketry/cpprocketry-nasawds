@@ -16,7 +16,7 @@ var build = function (done) {
 };
 
 before(function (done) {
-  this.timeout(15000);
+  //this.timeout(15000);
   build(done);
 });
 
