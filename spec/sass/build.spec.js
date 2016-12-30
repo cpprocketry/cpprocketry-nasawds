@@ -20,7 +20,7 @@ before(function (done) {
   build(done);
 });
 
-describe('build output', function () {
+describe('build output', function (done) {
 
   it('generates CSS at dist/css/nasawds.css', function () {
     var distFilename = path.join(distPath, 'nasawds.css');
