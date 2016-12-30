@@ -12,7 +12,7 @@ var distPath = path.resolve(
 );
 
 var build = function (done) {
-  child.exec('npm run build', {}, done);
+  child.exec('npm run build', {}, function() { done(); });
 };
 
 before(function (done) {
@@ -20,7 +20,7 @@ before(function (done) {
   build(done);
 });
 
-describe('build output', function (done) {
+describe('build output', function () {
 
   it('generates CSS at dist/css/nasawds.css', function () {
     var distFilename = path.join(distPath, 'nasawds.css');
