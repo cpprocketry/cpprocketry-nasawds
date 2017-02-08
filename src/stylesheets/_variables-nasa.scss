@@ -1,22 +1,22 @@
 // These variables override the variables set in _variables.scss to customize for NASA.
 
 // Color
-$color-primary:              #105bd8;
-$color-primary-darker:       #1d4893; //#164493 !default;
-$color-primary-darkest:      #112951;
+$color-primary:              #105bd8 !default;
+$color-primary-darker:       #1d4893 !default; //#164493 !default;
+$color-primary-darkest:      #112951 !default;
 
-$color-secondary:            #dd361c;
-$color-secondary-darkest:    #99231b;
-$color-secondary-dark:       #c62d1f;
-$color-secondary-light:      #e59892; // lighten($color-secondary, 60%)
-$color-secondary-lightest:   #f9e0de; // lighten($color-secondary, 90%)
+$color-secondary:            #dd361c !default;
+$color-secondary-darkest:    #99231b !default;
+$color-secondary-dark:       #c62d1f !default;
+$color-secondary-light:      #e59892 !default; // lighten($color-secondary, 60%)
+$color-secondary-lightest:   #f9e0de !default; // lighten($color-secondary, 90%)
 
-$color-base:                 #22262f;
+$color-base:                 #000000 !default;
 
-$color-gray-dark:            #313744;
-$color-gray:                 #5b606b; // lighten($color-gray-dark, 20%)
+$color-gray-dark:            #313744 !default;
+$color-gray:                 #5b606b !default; // lighten($color-gray-dark, 20%)
 
-$color-gold:                 #ff9d1e;
-$color-gold-light:           #f9aa43;
-$color-gold-lighter:         #ffc375;
-$color-gold-lightest:        #ffebd1;
+$color-gold:                 #ff9d1e !default;
+$color-gold-light:           #f9aa43 !default;
+$color-gold-lighter:         #ffc375 !default;
+$color-gold-lightest:        #ffebd1 !default;

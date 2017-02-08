@@ -219,3 +219,24 @@ $z-index-nav:     9000;
     }
   }
 }
+
+// Dark header option ----------- //
+
+.usa-header-dark {
+  background-color: $color-base;
+
+  @include media($nav-width) {
+    border-bottom-color: $color-gray-dark;
+  }
+  .usa-logo a {
+    color: $color-white;
+  }
+}
+
+.usa-header-dark.usa-header-extended {
+  .usa-nav {
+    @include media($nav-width) {
+      border-top-color: $color-gray-dark;
+    }
+  }
+}

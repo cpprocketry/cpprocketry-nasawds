@@ -5,6 +5,11 @@
   padding-bottom: 1rem;
 }
 
+@mixin nav-border-dark {
+  border-bottom: 0.7rem solid $color-secondary;
+  padding-bottom: 1rem;
+}
+
 .usa-navbar {
   border-bottom: 1px solid $color-gray-light;
   height: 4rem;
@@ -422,5 +427,132 @@
 
   > ul {
     @include unstyled-list;
+  }
+}
+
+// Dark option ----------- //
+
+.usa-header-dark .usa-navbar {
+  border-bottom-color: $color-gray-dark;
+}
+
+.usa-header-dark {
+  .usa-nav-secondary-links {
+    color: $color-gray-lighter;
+  }
+
+  .usa-nav-secondary-links a, .usa-nav-secondary-links .usa-header-search-button {
+    @include media($nav-width) {
+      color: $color-gray-lighter;
+      &:hover {
+        color: $color-primary-alt-light;
+      }
+    }
+  }
+}
+
+.usa-nav-dark {
+  background-color: $color-base;
+  border-left-color: $color-gray-dark;
+
+  .usa-accordion-button {
+    color: $color-gray-lighter;
+  }
+
+  .usa-nav-secondary-links a, .usa-nav-secondary-links .usa-header-search-button {
+    color: $color-gray-lighter;
+    &:hover {
+      color: $color-primary-alt-light;
+    }
+  }
+
+  .usa-nav-link {
+    &:hover {
+      span {
+        @include media($nav-width) {
+          @include nav-border-dark;
+        }
+      }
+    }
+  }
+}
+
+.usa-nav-dark .usa-nav-primary {
+  a {
+    color: $color-gray-lighter;
+    &:hover {
+      background-color: transparent;
+      color: $color-primary-alt-light;
+    }
+  }
+
+  > li {
+    > a {
+      @include media($nav-width) {
+        color: $color-gray-lighter;
+      }
+      &:hover {
+        @include media($nav-width) {
+          color: $color-gray-lighter;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .usa-nav-submenu {
+    @include media($nav-width) {
+      background-color: $color-gray-lighter;
+    }
+    a {
+      @include media($nav-width) {
+        color: $color-base;
+      }
+    }
+  }
+
+  button {
+    @include media($nav-width) {
+      color: $color-gray-lighter;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $color-primary-alt-light;
+
+      @include media($nav-width) {
+        background-color: transparent;
+        &:hover {
+          color: $color-gray-lighter;
+        }
+      }
+    }
+    &[aria-expanded=false] { /* stylelint-disable-line selector-no-qualifying-type */
+      background-image: url('#{$image-path}/plus-alt.png');
+      background-image: url('#{$image-path}/plus-alt.svg');
+
+      @include media($nav-width) {
+        background-image: url('#{$image-path}/angle-arrow-down.png');
+        background-image: url('#{$image-path}/angle-arrow-down.svg');
+      }
+    }
+    &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
+      background-image: url('#{$image-path}/minus-alt.png');
+      background-image: url('#{$image-path}/minus-alt.svg');
+      color: $color-primary-alt-light;
+
+      @include media($nav-width) {
+        background-color: $color-gray-lighter;
+        color: $color-base;
+        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
+        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+        &:hover {
+          background-color: $color-gray-lighter;
+          color: $color-base;
+        }
+        span {
+          @include nav-border-dark;
+        }
+      }
+    }
   }
 }
