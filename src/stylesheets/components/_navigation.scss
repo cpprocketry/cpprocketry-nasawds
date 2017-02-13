@@ -192,14 +192,14 @@
       background-size: 1rem;
 
       @include media($nav-width) {
-        background-color: $color-gray-dark;
+        background-color: $color-primary-darkest;
         color: $color-white;
         background-image: url('#{$image-path}/angle-arrow-down-hover.png');
         background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
         background-position: right 1.5rem top 44%;
 
         &:hover {
-          background-color: $color-gray-dark;
+          background-color: $color-primary-darkest;
         }
 
         span {
@@ -290,7 +290,7 @@
   @include media($nav-width) {
     @include unstyled-list;
     @include padding(1.15rem null);
-    background-color: $color-gray-dark;
+    background-color: $color-primary-darkest;
     min-width: 21.5rem;
     width: auto;
     position: absolute;
@@ -308,7 +308,7 @@
 
     &:hover {
       @include media($nav-width) {
-        background-color: $color-gray-dark;
+        background-color: $color-primary-darkest;
         color: $color-white;
         text-decoration: underline;
       }
@@ -353,7 +353,7 @@
 // Navigation mega menu -------- //
 
 @mixin outer-megamenu {
-  background-color: $color-gray-dark;
+  background-color: $color-primary-darkest;
   content: '';
   display: block;
   height: 100%;
@@ -531,8 +531,8 @@
       background-image: url('#{$image-path}/plus-alt.svg');
 
       @include media($nav-width) {
-        background-image: url('#{$image-path}/angle-arrow-down.png');
-        background-image: url('#{$image-path}/angle-arrow-down.svg');
+        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
+        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
       }
     }
     &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
@@ -543,8 +543,8 @@
       @include media($nav-width) {
         background-color: $color-gray-lighter;
         color: $color-base;
-        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
-        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+        background-image: url('#{$image-path}/angle-arrow-down.png');
+        background-image: url('#{$image-path}/angle-arrow-down.svg');
         &:hover {
           background-color: $color-gray-lighter;
           color: $color-base;
