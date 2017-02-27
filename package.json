@@ -1,10 +1,10 @@
 {
   "name": "nasawds",
-  "version": "0.14.0",
+  "version": "1.0.0",
   "description": "Open source UI components and visual style guide for NASA websites",
   "main": "src/js/start.js",
   "scripts": {
-    "check-publish": "publish",
+    "check-publish": "npm publish",
     "prepublish": "gulp copy-vendor-sass && gulp build",
     "prestart": "gulp copy-vendor-sass",
     "build:package": "gulp copy-vendor-sass && gulp release",
@@ -36,7 +36,7 @@
   "homepage": "https://github.com/bruffridge/web-design-standards#readme",
   "dependencies": {
     "bourbon": "^4.2.6",
-    "bourbon-neat": "github:thoughtbot/neat#neat-1.8.0-node-sass",
+    "bourbon-neat": "https://github.com/thoughtbot/neat/archive/neat-1.8.0-node-sass.tar.gz",
     "classlist-polyfill": "^1.0.3",
     "cross-spawn": "^2.1.5",
     "lodash.debounce": "^4.0.7",
