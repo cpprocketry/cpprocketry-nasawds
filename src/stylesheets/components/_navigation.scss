@@ -1,8 +1,12 @@
-
 // Header navigation ------------- //
 
 @mixin nav-border {
   border-bottom: 0.7rem solid $color-primary;
+  padding-bottom: 1rem;
+}
+
+@mixin nav-border-dark {
+  border-bottom: 0.7rem solid $color-secondary;
   padding-bottom: 1rem;
 }
 
@@ -39,9 +43,11 @@
 
 .usa-nav {
   $sliding-panel-width: 26rem;
+
   @include position(fixed, 0 0 0 auto);
   @include size($sliding-panel-width 100%);
   @include transform(translateX($sliding-panel-width));
+
   background: $color-white;
   border-left: 1px solid $color-gray-light;
   border-right: 0;
@@ -54,6 +60,7 @@
   @include media($nav-width) {
     @include padding(5rem 0 0 null);
     @include transform(translateX(0));
+
     border-left: none;
     display: block;
     float: right;
@@ -163,7 +170,7 @@
       }
     }
 
-    &[aria-expanded=false] {
+    &[aria-expanded=false] { /* stylelint-disable-line selector-no-qualifying-type */
       background-image: url('#{$image-path}/plus-alt.png');
       background-image: url('#{$image-path}/plus-alt.svg');
       background-repeat: no-repeat;
@@ -177,7 +184,7 @@
       }
     }
 
-    &[aria-expanded=true] {
+    &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
       background-image: url('#{$image-path}/minus-alt.png');
       background-image: url('#{$image-path}/minus-alt.svg');
       background-repeat: no-repeat;
@@ -185,14 +192,14 @@
       background-size: 1rem;
 
       @include media($nav-width) {
-        background-color: $color-gray-dark;
+        background-color: $color-primary-darkest;
         color: $color-white;
         background-image: url('#{$image-path}/angle-arrow-down-hover.png');
         background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
         background-position: right 1.5rem top 44%;
 
         &:hover {
-          background-color: $color-gray-dark;
+          background-color: $color-primary-darkest;
         }
 
         span {
@@ -283,7 +290,7 @@
   @include media($nav-width) {
     @include unstyled-list;
     @include padding(1.15rem null);
-    background-color: $color-gray-dark;
+    background-color: $color-primary-darkest;
     min-width: 21.5rem;
     width: auto;
     position: absolute;
@@ -301,14 +308,14 @@
 
     &:hover {
       @include media($nav-width) {
-        background-color: $color-gray-dark;
+        background-color: $color-primary-darkest;
         color: $color-white;
         text-decoration: underline;
       }
     }
 
     &:hover,
-    &.usa-current {
+    &.usa-current { /* stylelint-disable-line selector-no-qualifying-type */
       @include media($nav-width) {
         padding-left: 1.8rem;
       }
@@ -346,7 +353,7 @@
 // Navigation mega menu -------- //
 
 @mixin outer-megamenu {
-  background-color: $color-gray-dark;
+  background-color: $color-primary-darkest;
   content: '';
   display: block;
   height: 100%;
@@ -420,5 +427,132 @@
 
   > ul {
     @include unstyled-list;
+  }
+}
+
+// Dark option ----------- //
+
+.usa-header-dark .usa-navbar {
+  border-bottom-color: $color-gray-dark;
+}
+
+.usa-header-dark {
+  .usa-nav-secondary-links {
+    color: $color-gray-lighter;
+  }
+
+  .usa-nav-secondary-links a, .usa-nav-secondary-links .usa-header-search-button {
+    @include media($nav-width) {
+      color: $color-gray-lighter;
+      &:hover {
+        color: $color-primary-alt-light;
+      }
+    }
+  }
+}
+
+.usa-nav-dark {
+  background-color: $color-base;
+  border-left-color: $color-gray-dark;
+
+  .usa-accordion-button {
+    color: $color-gray-lighter;
+  }
+
+  .usa-nav-secondary-links a, .usa-nav-secondary-links .usa-header-search-button {
+    color: $color-gray-lighter;
+    &:hover {
+      color: $color-primary-alt-light;
+    }
+  }
+
+  .usa-nav-link {
+    &:hover {
+      span {
+        @include media($nav-width) {
+          @include nav-border-dark;
+        }
+      }
+    }
+  }
+}
+
+.usa-nav-dark .usa-nav-primary {
+  a {
+    color: $color-gray-lighter;
+    &:hover {
+      background-color: transparent;
+      color: $color-primary-alt-light;
+    }
+  }
+
+  > li {
+    > a {
+      @include media($nav-width) {
+        color: $color-gray-lighter;
+      }
+      &:hover {
+        @include media($nav-width) {
+          color: $color-gray-lighter;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .usa-nav-submenu {
+    @include media($nav-width) {
+      background-color: $color-gray-lighter;
+    }
+    a {
+      @include media($nav-width) {
+        color: $color-base;
+      }
+    }
+  }
+
+  button {
+    @include media($nav-width) {
+      color: $color-gray-lighter;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $color-primary-alt-light;
+
+      @include media($nav-width) {
+        background-color: transparent;
+        &:hover {
+          color: $color-gray-lighter;
+        }
+      }
+    }
+    &[aria-expanded=false] { /* stylelint-disable-line selector-no-qualifying-type */
+      background-image: url('#{$image-path}/plus-alt.png');
+      background-image: url('#{$image-path}/plus-alt.svg');
+
+      @include media($nav-width) {
+        background-image: url('#{$image-path}/angle-arrow-down-hover.png');
+        background-image: url('#{$image-path}/angle-arrow-down-hover.svg');
+      }
+    }
+    &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
+      background-image: url('#{$image-path}/minus-alt.png');
+      background-image: url('#{$image-path}/minus-alt.svg');
+      color: $color-primary-alt-light;
+
+      @include media($nav-width) {
+        background-color: $color-gray-lighter;
+        color: $color-base;
+        background-image: url('#{$image-path}/angle-arrow-down.png');
+        background-image: url('#{$image-path}/angle-arrow-down.svg');
+        &:hover {
+          background-color: $color-gray-lighter;
+          color: $color-base;
+        }
+        span {
+          @include nav-border-dark;
+        }
+      }
+    }
   }
 }

@@ -6,6 +6,9 @@
 node_modules/
 npm-debug.log*
 
+# code coverage
+coverage/
+
 # README: Ignore the dist directories
 #
 dist/
@@ -13,3 +16,7 @@ dist/
 # Ignore gulp-generated vendor files
 #
 src/stylesheets/lib
+
+.netbeans.xml
+scss-lint.yml
+.bundle/

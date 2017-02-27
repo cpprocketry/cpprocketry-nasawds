@@ -20,8 +20,8 @@ var render = function (data, done) {
 
 describe('include paths', function () {
 
-  it('can be loaded with @import "uswds"', function (done) {
-    render('@import "uswds";', done);
+  it('can be loaded with @import "nasawds"', function (done) {
+    render('@import "nasawds";', done);
   });
 
   it('can be loaded with @import "all"', function (done) {
