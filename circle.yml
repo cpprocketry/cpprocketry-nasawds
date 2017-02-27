@@ -18,11 +18,11 @@ test:
     - ls -agolf dist/
     - codeclimate-test-reporter < coverage/lcov.info
 
-#deployment:
-#  npm:
-#    branch: master
-#    owner: 18F
-#    commands:
-#      - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-#      - npm run build:package # Build distributed package files
-#      - npm run check-publish
+deployment:
+  npm:
+    branch: master
+    owner: bruffridge
+    commands:
+      - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+      - npm run build:package # Build distributed package files
+      - npm run check-publish
