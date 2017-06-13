@@ -530,6 +530,20 @@
       }
     }
   }
+  
+  .usa-megamenu {
+    &::before {
+      @include media($nav-width) {
+        background-color: $color-gray-lighter;
+      }
+    }
+
+    &::after {
+      @include media($nav-width) {
+        background-color: $color-gray-lighter;
+      }
+    }
+  }
 
   button {
     @include media($nav-width) {
