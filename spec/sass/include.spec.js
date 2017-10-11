@@ -2,6 +2,7 @@
 const assert = require('assert');
 const sass = require('node-sass');
 const path = require('path');
+const { runGulp, distScssPath, render } = require('./util');
 
 const includePath = path.resolve(
   path.join(
@@ -10,27 +11,31 @@ const includePath = path.resolve(
   )
 );
 
-const render = function (data) {
-  return new Promise((resolve, reject) => {
-    sass.render({
-      data: data,
-      includePaths: [
-        includePath,
-      ],
-    }, error => {
-      error ? reject(error) : resolve();
-    });
-  });
-};
-
 describe('include paths', function () {
 
   it('can be loaded with @import "nasawds"', function () {
-    return render('@import "nasawds";');
+    return render('@import "nasawds";', [ includePath ]);
   });
 
   it('can be loaded with @import "all"', function () {
-    return render('@import "all";');
+    return render('@import "all";', [ includePath ]);
+  });
+
+});
+
+describe('standalone dist scss', function () {
+
+  before(function () {
+    this.timeout(20000);
+    return runGulp('copy-dist-sass');
+  });
+
+  it('can be loaded with @import "nasawds"', function () {
+    return render('@import "nasawds";', [ distScssPath ]);
+  });
+
+  it('can be loaded with @import "all"', function () {
+    return render('@import "all";', [ distScssPath ]);
   });
 
 });
