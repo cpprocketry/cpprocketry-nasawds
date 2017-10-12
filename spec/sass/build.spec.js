@@ -13,7 +13,7 @@ before(function () {
 describe('build output', function () {
 
   it('generates CSS at dist/css/nasawds.css', function () {
-    const distFilename = path.join(distPath, 'nasawds.css');
+    const distFilename = path.join(distCssPath, 'nasawds.css');
     assert.ok(
       fs.existsSync(distFilename),
       'the file does not exist: ' + distFilename
@@ -21,7 +21,7 @@ describe('build output', function () {
   });
 
   it('generates minified CSS at dist/css/nasawds.min.css', function () {
-    const distFilename = path.join(distPath, 'nasawds.min.css');
+    const distFilename = path.join(distCssPath, 'nasawds.min.css');
     assert.ok(
       fs.existsSync(distFilename),
       'the file does not exist: ' + distFilename
