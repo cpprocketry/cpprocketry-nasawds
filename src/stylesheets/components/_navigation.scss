@@ -677,6 +677,7 @@
         }
         span {
           @include nav-border-dark;
+          color: $color-base;
         }
       }
     }

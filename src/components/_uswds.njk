@@ -2,11 +2,11 @@
 <html lang="en-US">
   <head>
     <title>{{ _self.title }}</title>
-    <link rel="stylesheet" href="{{ uswds.path }}/css/uswds.min.css">
+    <link rel="stylesheet" href="{{ nasawds.path }}/css/nasawds.min.css">
   </head>
   <body>
     {% block body %}{{ yield }}{% endblock %}
-    <script src="{{ uswds.path }}/js/uswds.min.js"></script>
+    <script src="{{ nasawds.path }}/js/nasawds.min.js"></script>
     <script>
     window.addEventListener('load', function() {
       document.body.addEventListener('submit', function(e) {

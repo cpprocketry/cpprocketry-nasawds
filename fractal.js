@@ -14,7 +14,7 @@ const context = {
   },
 };
 
-fractal.set('project.title', 'U.S. Web Design Standards');
+fractal.set('project.title', 'NASA Web Design Standards');
 
 const components = fractal.components;
 components.set('ext', '.njk');

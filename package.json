@@ -12,6 +12,7 @@
     "build": "gulp build",
     "build:css": "gulp sass",
     "build:js": "gulp javascript",
+    "build:fractal": "fractal build",
     "cover": "istanbul cover --config config/istanbul.yml gulp cover",
     "cracks": "cracks --paths package.json,spec",
     "federalist": "npm install --dev && gulp build && fractal build",
