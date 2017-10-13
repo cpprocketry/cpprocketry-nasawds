@@ -17,7 +17,7 @@ gulp.task('css', function () {
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
-        'node_modules/uswds/src/stylesheets',
+        'node_modules/nasawds/src/stylesheets',
       ],
       outputStyle: 'compressed',
     }))

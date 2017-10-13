@@ -11,8 +11,13 @@
 }
 
 @mixin nav-border-dark {
+  border-bottom: 0.4rem solid $color-secondary;
+  padding-bottom: 0.6rem;
+}
+
+@mixin nav-border-thick-dark {
   border-bottom: 0.7rem solid $color-secondary;
-  padding-bottom: 1rem;
+  padding-bottom: 0.9rem;
 }
 
 .usa-navbar {
