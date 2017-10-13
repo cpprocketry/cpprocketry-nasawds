@@ -587,7 +587,7 @@
     &:hover {
       span {
         @include media($nav-width) {
-          @include nav-border-dark;
+          @include nav-border-thick-dark;
         }
       }
     }
