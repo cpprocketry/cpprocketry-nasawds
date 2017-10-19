@@ -594,6 +594,18 @@
   }
 }
 
+.usa-header-basic .usa-nav-dark {
+  .usa-nav-link {
+    &:hover {
+      span {
+        @include media($nav-width) {
+          @include nav-border-dark;
+        }
+      }
+    }
+  }
+}
+
 .usa-nav-dark .usa-nav-primary {
   a {
     color: $color-gray-lighter;
@@ -684,6 +696,16 @@
           @include nav-border-thick-dark;
           color: $color-base;
         }
+      }
+    }
+  }
+}
+
+.usa-header-basic .usa-nav-dark .usa-nav-primary {
+  button[aria-expanded=true] {
+    @include media($nav-width) {
+      span {
+        @include nav-border-dark;
       }
     }
   }
