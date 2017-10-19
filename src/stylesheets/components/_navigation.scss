@@ -681,7 +681,7 @@
           color: $color-base;
         }
         span {
-          @include nav-border-dark;
+          @include nav-border-thick-dark;
           color: $color-base;
         }
       }

@@ -1,6 +1,6 @@
 {
   "name": "nasawds",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Open source UI components and visual style guide for NASA websites",
   "main": "src/js/start.js",
   "engines": {
