@@ -702,7 +702,7 @@
 }
 
 .usa-header-basic .usa-nav-dark .usa-nav-primary button {
-  &[aria-expanded=true] {
+  &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
     @include media($nav-width) {
       span {
         @include nav-border-dark;
