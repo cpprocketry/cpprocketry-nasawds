@@ -701,8 +701,8 @@
   }
 }
 
-.usa-header-basic .usa-nav-dark .usa-nav-primary {
-  button[aria-expanded=true] {
+.usa-header-basic .usa-nav-dark .usa-nav-primary button {
+  &[aria-expanded=true] {
     @include media($nav-width) {
       span {
         @include nav-border-dark;
