@@ -699,10 +699,34 @@
       }
     }
   }
+  
+  @include media($nav-width) {
+    a.usa-current,
+    .usa-current { // stylelint-disable-line selector-no-qualifying-type
+      &:hover {
+        span {
+          color: $color-gray-lighter;
+        }
+      }
+
+      span {
+        @include nav-border-thick-dark;
+        color: $color-gray-lightest;
+      }
+    }
+  }
 }
 
-.usa-header-basic .usa-nav-dark .usa-nav-primary button {
-  &[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
+.usa-header-basic .usa-nav-dark .usa-nav-primary {
+  button[aria-expanded=true] { /* stylelint-disable-line selector-no-qualifying-type */
+    @include media($nav-width) {
+      span {
+        @include nav-border-dark;
+      }
+    }
+  }
+  
+  .usa-current {
     @include media($nav-width) {
       span {
         @include nav-border-dark;
