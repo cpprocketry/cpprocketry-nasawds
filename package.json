@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bruffridge/web-design-standards.git"
+    "url": "git+https://github.com/bruffridge/nasawds.git"
   },
   "author": "18F + NASA",
   "contributors": [
@@ -46,9 +46,9 @@
   ],
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/bruffridge/web-design-standards/issues"
+    "url": "https://github.com/bruffridge/nasawds/issues"
   },
-  "homepage": "https://github.com/bruffridge/web-design-standards#readme",
+  "homepage": "https://github.com/bruffridge/nasawds#readme",
   "dependencies": {
     "@types/node": "^8.5.5",
     "array-filter": "^1.0.0",
