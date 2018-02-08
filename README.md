@@ -1,5 +1,5 @@
 # NASA Glenn Web Design System
-[![CircleCI Build Status](https://circleci.com/gh/nasa/nasawds/tree/develop.svg?style=shield)](https://circleci.com/gh/nasa/nasawds/tree/develop) [![Test Coverage](https://codeclimate.com/github/nasa/nasawds/badges/coverage.svg)](https://codeclimate.com/github/nasa/nasawds/coverage)
+[![CircleCI Build Status](https://circleci.com/gh/nasa/nasawds/tree/develop.svg?style=shield)](https://circleci.com/gh/nasa/nasawds/tree/develop) [![Test Coverage](https://codeclimate.com/github/bruffridge/nasawds/badges/coverage.svg)](https://codeclimate.com/github/bruffridge/nasawds/coverage)
 
 The [NASA Glenn Web Design System](https://nasa.github.io/nasawds-site) includes a library of open source UI components and a visual style guide for NASA websites. It is a fork of the [U.S. Web Design System](https://github.com/uswds/uswds).
 
