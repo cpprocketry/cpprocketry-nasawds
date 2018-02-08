@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bruffridge/nasawds.git"
+    "url": "git+https://github.com/nasa/nasawds.git"
   },
   "author": "18F + NASA",
   "contributors": [
@@ -46,9 +46,9 @@
   ],
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/bruffridge/nasawds/issues"
+    "url": "https://github.com/nasa/nasawds/issues"
   },
-  "homepage": "https://github.com/bruffridge/nasawds#readme",
+  "homepage": "https://github.com/nasa/nasawds#readme",
   "dependencies": {
     "@types/node": "^8.5.5",
     "array-filter": "^1.0.0",
