@@ -1,6 +1,6 @@
 # Usage examples
 
-These directories illustrate how to use the Standards `nasawds` [npm] package
+These directories illustrate how to use the Design System `nasawds` [npm] package
 with different tools:
 
 1. Compiling CSS with [node-sass](node-sass/)
