@@ -1,7 +1,7 @@
 <div class="usa-navbar">
   <div class="usa-logo" id="{{ header.primary.id_prefix }}logo">
     <em class="usa-logo-text">
-      <a href="{{ header.link.href | default('/') }}"
+      <a href="{{ header.link.href | default('javascript:void(0)') }}"
         title="{{ header.link.title | default('Home') }}"
         aria-label="{{ header.link.label | default('Home') }}">
         {{ header.title | default(site.title) }}
