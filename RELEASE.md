@@ -80,6 +80,8 @@ example, any of the following should trigger a major version increment:
        with the `release-` or `hotfix-` prefix. Suggested prefixes include
        `refactor-`, `feature-`, `docs-`, and `patch-`.
 
+    1. If there are changes to uswds that haven't been merged into `develop` yet, it is recommended to pull/merge `upstream/master` into your branch.
+
     1. File your pull request to merge into the `develop` branch.
 
 ### Publishing a new release
@@ -94,7 +96,7 @@ example, any of the following should trigger a major version increment:
 git pull origin
 git checkout -b release-{{ version }} origin/develop
 ```
-- [ ] **To create a new release that merges changes from uswds,** merge `upstream/master` into the version branch.
+
 - [ ] **If there's been further work on `develop` since branching,** merge the most recent `develop` into the version branch.
 
 - - -
