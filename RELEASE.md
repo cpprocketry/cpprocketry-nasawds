@@ -58,9 +58,10 @@ example, any of the following should trigger a major version increment:
 
 ### Git workflow
 
-* We want to keep nasawds up-to-date with [uswds](https://github.com/uswds/uswds) changes: 
+* We want to keep nasawds and nasawds-site up-to-date with [uswds](https://github.com/uswds/uswds) and [uswds-site](https://github.com/uswds/uswds-site) changes: 
 
-    * Create a new remote `git remote add upstream https://github.com/uswds/uswds.git` that points to uswds so we can pull in changes.
+    * Create a new remote in nasawds `git remote add upstream https://github.com/uswds/uswds.git` that points to uswds so we can pull in changes.
+    * Create a new remote in nasawds-site `git remote add upstream https://github.com/uswds/uswds-site.git` that points to uswds-site so we can pull in changes.
 
 * We have two main branches that are never deleted:
 
@@ -80,7 +81,7 @@ example, any of the following should trigger a major version increment:
        with the `release-` or `hotfix-` prefix. Suggested prefixes include
        `refactor-`, `feature-`, `docs-`, and `patch-`.
 
-    1. If there are changes to uswds that haven't been merged into `develop` yet, it is recommended to pull/merge `upstream/master` into your branch.
+    1. If there are changes to uswds (or uswds-site) that haven't been merged into `develop` yet, it is recommended to pull/merge `upstream/master` into your branch.
 
     1. File your pull request to merge into the `develop` branch.
 
