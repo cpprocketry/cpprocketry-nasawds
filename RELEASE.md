@@ -184,6 +184,10 @@ git checkout -b release-{{ version }} origin/develop
 ```
 npm install --save-exact nasawds@{{ version }}
 ```
+or
+```
+yarn add nasawds@{{ version }} --exact
+```
 - [ ] Commit this change to the release branch
 
 - - -
