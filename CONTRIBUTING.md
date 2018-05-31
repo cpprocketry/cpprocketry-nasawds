@@ -64,8 +64,8 @@ components to "golden" screenshots that represent what the components are
 supposed to look like.
 
 Golden screenshots are stored on your local development system *only*;
-they're not version controlled. This means that after making changes to a branch, 
-you can switch to the branch you'd like to compare it to (e.g. the `develop` 
+they're not version controlled. This means that after making changes to a branch,
+you can switch to the branch you'd like to compare it to (e.g. the `develop`
 branch) to generate your golden screenshots.
 
 To generate the golden screenshots, run:
@@ -91,7 +91,7 @@ any conflicting screenshots.
 To build the `nasawds` package in preparation for releases, run:
 
 ```sh
-npm run prepublish
+npm run release
 ```
 
 ## Coding guidelines
@@ -122,7 +122,7 @@ See the [release documentation](RELEASE.md#release-process) for more information
 
 ### A few parts of this project are not in the public domain
 
-For complete attribution and licensing information for parts of the project that are not in the public domain, see [LICENSE.md](https://github.com/nasa/nasawds/blob/develop/LICENSE.md).
+For complete attribution and licensing information for parts of the project that are not in the public domain, see the [LICENSE](LICENSE.md).
 
 ### The rest of this project is in the public domain
 
@@ -137,7 +137,6 @@ the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/pub
 All contributions to this project will be released under the CC0
 dedication. By submitting a pull request, you are agreeing to comply
 with this waiver of copyright interest.
-
 
 [Node.js]: https://nodejs.org
 [Fractal]: http://fractal.build
