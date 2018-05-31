@@ -130,10 +130,10 @@ Otherwise, proceed with the next versioned release!
 
 #### Version the release with `npm`
 `npm version` will increment the version number semantically in `package.json` and commit the changes to git. Versions will be tagged on the master branch.
-- [ ] **For prerelease releases:** Run `npm --no-git-tag-version version prerelease`.
-- [ ] **For patch releases:** Run `npm --no-git-tag-version version patch`.
-- [ ] **For minor releases:** Run `npm --no-git-tag-version version minor`.
-- [ ] **For major releases:** Run `npm --no-git-tag-version version major`.
+- [ ] **For prerelease releases:** Run `npm version prerelease --no-tag`.
+- [ ] **For patch releases:** Run `npm version patch --no-tag`.
+- [ ] **For minor releases:** Run `npm version minor --no-tag`.
+- [ ] **For major releases:** Run `npm version major --no-tag`.
 
 - - -
 
