@@ -32,7 +32,7 @@
 @mixin h6 {
   font-size: $h6-font-size;
   font-weight: $font-normal;
-  line-height: $heading-line-height;
+  line-height: $base-line-height;
   text-transform: uppercase;
 }
 
