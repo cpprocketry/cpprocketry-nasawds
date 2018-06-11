@@ -68,7 +68,7 @@ h3,
 h4,
 h5 {
   clear: both;
-  font-family: $font-serif;
+  font-family: $helvetica;
   line-height: $heading-line-height;
   margin-bottom: .5em;
   margin-top: 1.5em;
@@ -125,6 +125,20 @@ dfn {
   max-width: $text-max-width;
 }
 
+.usa-helvetica {
+  p,
+  a,
+  li,
+  span {
+    font-family: $helvetica;
+  }
+
+  a {
+    border-bottom: none;
+    font-weight: $font-bold;
+  }
+}
+
 .usa-sans {
   p,
   a,
@@ -145,6 +159,8 @@ dfn {
   li,
   span {
     font-family: $font-serif;
+    font-size: $base-font-size - .2rem;
+    line-height: $base-line-height + .2;
   }
 }
 
@@ -162,9 +178,8 @@ dfn {
 }
 
 .usa-font-lead {
-  font-family: $font-serif;
   font-size: $lead-font-size;
-  font-weight: $font-normal;
+  font-weight: 300;
   line-height: $lead-line-height;
   max-width: $lead-max-width;
 }
