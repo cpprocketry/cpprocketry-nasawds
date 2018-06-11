@@ -56,6 +56,7 @@ $z-index-nav:     9000;
 
 .usa-logo-text {
   font-family: $helvetica;
+
   @include font-smoothing;
   display: block;
   font-size: $h5-font-size;
