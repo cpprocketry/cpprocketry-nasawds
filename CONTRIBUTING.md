@@ -186,8 +186,9 @@ with this waiver of copyright interest.
 `git push --delete origin v0.11.1`
 
 ## To batch change the color of .svg files
-
-`cd /path/to/nasawds/src/img`
-`for f in *.svg; do sed -e 's/fill="#205493"/fill="#1d4893"/' -i "" "$f" ; done`
-`for f in *.svg; do sed -e 's/fill="#0071bc"/fill="#105bd8"/' -i "" "$f" ; done`
-`for f in *.svg; do sed -e 's/fill="#5b616b"/fill="#5b606b"/' -i "" "$f" ; done`
+```
+cd /path/to/nasawds/src/img
+for f in *.svg; do sed -e 's/fill="#205493"/fill="#1d4893"/' -i "" "$f" ; done
+for f in *.svg; do sed -e 's/fill="#0071bc"/fill="#105bd8"/' -i "" "$f" ; done
+for f in *.svg; do sed -e 's/fill="#5b616b"/fill="#5b606b"/' -i "" "$f" ; done
+```
