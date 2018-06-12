@@ -34,7 +34,7 @@ form `major.minor.patch`, where:
   `major` version and reset `minor` and `patch` (e.g. `1.1.2` to `2.0.0`)
 
 ### What is a release?
-Technically, release of the Web Design System core code "lives" in two
+Technically, the release of the Web Design System core code "lives" in two
 different places:
 
 1. On GitHub as a [tag][git tag] and corresponding [release][releases]
@@ -43,7 +43,7 @@ different places:
 ### The public API
 In most software projects, the "public API" corresponds to a single set of
 programming constructs, such as public classes or functions.  Because the
-Design System consist of tightly-bound HTML, CSS, and JavaScript, we must consider
+NASAWDS consists of tightly-bound HTML, CSS, and JavaScript, we must consider
 any "breaking" change to _any_ of these as a change to the public API. For
 example, any of the following should trigger a major version increment:
 
@@ -89,6 +89,9 @@ example, any of the following should trigger a major version increment:
 
 ⚠️ In these docs, `{{ version }}` should always be replaced with the semantic version number, i.e. `1.2.1` ⚠️
 
+#### Before you get started
+- [ ] Close all running NASAWDS processes in the terminal.
+
 #### Create the release branch
 
 - [ ] Determine if the version is a **patch** (`#.#.#`), **minor** (`#.#.0`), or **major** (`#.0.0`) version
@@ -97,7 +100,6 @@ example, any of the following should trigger a major version increment:
 git pull origin
 git checkout -b release-{{ version }} origin/develop
 ```
-
 - [ ] **If there's been further work on `develop` since branching,** merge the most recent `develop` into the version branch.
 
 - - -
@@ -120,7 +122,7 @@ npm publish --tag dev
 ``
 npm install --save nasawds@dev
 ``
-- [ ] Directly notify users who may be impacted by the proposed changes, and encourage them to alert us of any new issues within the prescribed testing period.
+- [ ] Directly notify users who may be impacted by the proposed changes, and encourage them to alert us to any new issues within the prescribed testing period.
 
 If you receive reports of any regressions (specifically, new issues introduced in the release), you can decide whether to address them in another pre-release or file them for the next official release. If you decide to move proceed with the release, it's good practice to alert users of the issue in your release notes, preferably with a :warning: emoji or similar.
 
@@ -140,53 +142,54 @@ Otherwise, proceed with the next versioned release!
 #### Merge the release into `master`
 
 - [ ] Push the version branch up to Github. If you are using SourceTree make sure that "push tags" is not selected.
-- [ ] Open a pull request from your release branch into `master`.
+- [ ] Open a pull request from your release branch into `master` with the title "Release {{ version }}."
 - [ ] List the key changes in the release in the pull request description. [See the v1.5.0 pull request](https://github.com/uswds/uswds/pull/2369) for an example.
 - [ ] Wait for all tests to complete successfully.
-- [ ] Have at least one team member to approved the pull request
+- [ ] Have at least one team member approve the pull request
 - [ ] Once the pull request is approved, merge it into `master`. This will trigger the following action:
 - CircleCI will publish the new release to [npm](https://www.npmjs.com/package/nasawds).
 
 - - -
 
 #### Check that the release was successful
-- [ ] Check the [CircleCI process](https://circleci.com/gh/nasa/nasawds)
-- [ ] Check [nasawds on npm](https://www.npmjs.com/package/nasawds)
+- [ ] Check that the [CircleCI process](https://circleci.com/gh/nasa/nasawds) completes
+- [ ] Check that the new release was [published to npm](https://www.npmjs.com/package/nasawds)
 
 - - -
 
-#### Create the binary, tag, and create the release in Github
+#### Create the release in GitHub
 
 - [ ] Close all running NASAWDS processes in the terminal
-- [ ] In the `master` branch run `npm run prepublish` to build the assets zip file. It will be created at `dist/nasawds-{{ version }}.zip`.
-- [ ] In [Github releases](https://github.com/nasa/nasawds/releases) select `Draft a new release`
-- [ ] `tag`: `v{{ version }}`
-- [ ] `target`: `master`
+- [ ] In the `master` branch run `npm run release` to build the assets zip file. It will be created at `dist/nasawds-{{ version }}.zip`.
+- [ ] In [GitHub releases](https://github.com/nasa/nasawds/releases) select `Draft a new release`
+- [ ] Add the `tag`: `v{{ version }}`
+- [ ] Use `target`: `master`
 - [ ] Add release notes to the body. Use previous release notes as a starting point. https://github.com/nasa/nasawds/releases/edit/v1.4.6
-- [ ] Have at least one team member review the release notes.
+- [ ] Have at least one team member review the release notes
 - [ ] Attach the `zip` binary you just created
 - [ ] Select `Publish release`
 
 - - -
 
+#### Merge `master` back into `develop`
+- [ ] Ensure that the `develop` branch is using the latest version
+
+- - -
+
 #### Update the site repo with the new version number on a new branch
 
-- [ ] Open the`nasawds-site` repo
-```
-cd path/to/nasawds-site
-```
-- [ ] Create a branch off `develop`
+- [ ] In the`nasawds-site` repo, create a branch off `master`
 ```
 git fetch origin
-git checkout -b release-{{ version }} origin/develop
+git checkout -b use-{{ version }} origin/master
 ```
 - [ ] Change the nasawds dependency in `package.json` to the new version from `npm`
 ```
-npm install --save-exact nasawds@{{ version }}
+npm install --save-exact nasawds@latest
 ```
 or
 ```
-yarn add nasawds@{{ version }} --exact
+yarn add nasawds@latest --exact
 ```
 - [ ] Commit this change to the release branch
 
@@ -194,20 +197,24 @@ yarn add nasawds@{{ version }} --exact
 
 #### Merge site changes into the site repo's `master` branch
 
-- [ ] Push the release branch to Github
+- [ ] Push the release branch to GitHub
 - [ ] Open a pull request from your release branch into `master`.
 - [ ] List the key changes in the release in the pull request description.
-- [ ] Have at least one team member to approved the pull request
+- [ ] Have at least one team member approve the pull request
 - [ ] Once the pull request is approved, merge it into `master`. This will trigger CircleCI to rebuild and redeploy the production site.
 
 - - -
 
 #### Check the NASAWDS website to assure correctness
-- [ ] Check that the `Download code` ZIP file linked from the [Download code and design files](https://nasa.github.io/nasawds-site/getting-started/download/) page works (at the time of this writing, it should point to the ZIP file you uploaded when you released the new version on GitHub).
-- [ ] Check that the correct version number is mentioned under the link.
+- [ ] Check that the `Download code` ZIP file linked from the [Download code and design files](https://nasa.github.io/nasawds-site/getting-started/download/) page works (it should point to the ZIP file you uploaded when you released the new version on GitHub) and that the correct version number is mentioned under the link.
 - [ ] Check that the new release shows up on the [Release notes](https://nasa.github.io/nasawds-site/whats-new/releases/) page.
 
 - - -
+#### Setup the next draft release notes
+- [ ] Click "Draft a new release" from the Releases page
+- [ ] Set the target to master
+- [ ] Add the title [unreleased]
+- [ ] Save draft
 
 [draft release]: https://github.com/nasa/nasawds/releases/new
 [git tag]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
