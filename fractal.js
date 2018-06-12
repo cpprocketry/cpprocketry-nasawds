@@ -4,7 +4,6 @@ const path = require('path');
 const fractal = require('@frctl/fractal').create();
 
 const context = {
-  title: 'NASA Web Design Standards',
   'package': {
     name: pkg.name,
     version: pkg.version,
@@ -14,7 +13,7 @@ const context = {
   },
 };
 
-fractal.set('project.title', 'NASA Web Design Standards');
+fractal.set('project.title', `NASA Web Design System (v${pkg.version})`);
 
 const components = fractal.components;
 components.set('ext', '.njk');

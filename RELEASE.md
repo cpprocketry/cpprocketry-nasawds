@@ -58,9 +58,10 @@ example, any of the following should trigger a major version increment:
 
 ### Git workflow
 
-* We want to keep nasawds up-to-date with [uswds](https://github.com/uswds/uswds) changes: 
+* We want to keep nasawds and nasawds-site up-to-date with [uswds](https://github.com/uswds/uswds) and [uswds-site](https://github.com/uswds/uswds-site) changes: 
 
-    * Create a new remote `git remote add upstream https://github.com/uswds/uswds.git` that points to uswds so we can pull in changes.
+    * Create a new remote in nasawds `git remote add upstream https://github.com/uswds/uswds.git` that points to uswds so we can pull in changes.
+    * Create a new remote in nasawds-site `git remote add upstream https://github.com/uswds/uswds-site.git` that points to uswds-site so we can pull in changes.
 
 * We have two main branches that are never deleted:
 
@@ -80,6 +81,8 @@ example, any of the following should trigger a major version increment:
        with the `release-` or `hotfix-` prefix. Suggested prefixes include
        `refactor-`, `feature-`, `docs-`, and `patch-`.
 
+    1. If there are changes to uswds (or uswds-site) that haven't been merged into `develop` yet, it is recommended to pull/merge `upstream/master` into your branch.
+
     1. File your pull request to merge into the `develop` branch.
 
 ### Publishing a new release
@@ -94,7 +97,7 @@ example, any of the following should trigger a major version increment:
 git pull origin
 git checkout -b release-{{ version }} origin/develop
 ```
-- [ ] **To create a new release that merges changes from uswds,** merge `upstream/master` into the version branch.
+
 - [ ] **If there's been further work on `develop` since branching,** merge the most recent `develop` into the version branch.
 
 - - -
@@ -127,10 +130,10 @@ Otherwise, proceed with the next versioned release!
 
 #### Version the release with `npm`
 `npm version` will increment the version number semantically in `package.json` and commit the changes to git. Versions will be tagged on the master branch.
-- [ ] **For prerelease releases:** Run `npm --no-git-tag-version version prerelease`.
-- [ ] **For patch releases:** Run `npm --no-git-tag-version version patch`.
-- [ ] **For minor releases:** Run `npm --no-git-tag-version version minor`.
-- [ ] **For major releases:** Run `npm --no-git-tag-version version major`.
+- [ ] **For prerelease releases:** Run `npm version prerelease --no-tag`.
+- [ ] **For patch releases:** Run `npm version patch --no-tag`.
+- [ ] **For minor releases:** Run `npm version minor --no-tag`.
+- [ ] **For major releases:** Run `npm version major --no-tag`.
 
 - - -
 
@@ -180,6 +183,10 @@ git checkout -b release-{{ version }} origin/develop
 - [ ] Change the nasawds dependency in `package.json` to the new version from `npm`
 ```
 npm install --save-exact nasawds@{{ version }}
+```
+or
+```
+yarn add nasawds@{{ version }} --exact
 ```
 - [ ] Commit this change to the release branch
 

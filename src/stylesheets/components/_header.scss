@@ -55,6 +55,9 @@ $z-index-nav:     9000;
 }
 
 .usa-logo-text {
+  font-family: $helvetica;
+
+  @include font-smoothing;
   display: block;
   font-size: $h5-font-size;
   font-style: normal;
@@ -154,11 +157,10 @@ $z-index-nav:     9000;
 
   .usa-navbar {
     @include media($nav-width) {
-      @include outer-container();
+      @include outer-container($site-max-width);
       @include padding(null $site-margins);
       display: block;
       height: auto;
-      max-width: $site-max-width;
     }
   }
 
@@ -173,10 +175,9 @@ $z-index-nav:     9000;
 
   .usa-nav-inner {
     @include media($nav-width) {
-      @include outer-container();
+      @include outer-container($site-max-width);
       @include padding(null $site-margins null 1.5rem);
       margin-top: -1px;
-      max-width: $site-max-width;
       position: relative;
     }
   }
