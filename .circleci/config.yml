@@ -11,13 +11,13 @@ jobs:
           command: sudo npm install -g codeclimate-test-reporter
       - restore_cache:
           keys:
-          - v1-uswds-dependencies-{{ checksum "package-lock.json" }}
-          - v1-uswds-dependencies-
+          - v1-nasawds-dependencies-{{ checksum "yarn.lock" }}
+          - v1-nasawds-dependencies-
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-uswds-dependencies-{{ checksum "package-lock.json" }}
+          key: v1-nasawds-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Run test
           command: npm test
@@ -40,8 +40,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-uswds-dependencies-{{ checksum "package-lock.json" }}
-          - v1-uswds-dependencies-
+          - v1-nasawds-dependencies-{{ checksum "yarn.lock" }}
+          - v1-nasawds-dependencies-
       - run: npm install --ignore-scripts
       - run:
           name: Build the NASAWDS package
