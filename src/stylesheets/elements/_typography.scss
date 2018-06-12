@@ -69,6 +69,8 @@ h4,
 h5,
 h6 {
   clear: both;
+  @include font-smoothing;
+  letter-spacing: -.021em;
   font-family: $helvetica;
   line-height: $heading-line-height;
   margin-bottom: 0.5em;
@@ -97,7 +99,6 @@ h5 {
 
 h6 {
   @include h6();
-  font-family: $font-sans;
 }
 
 // Remove user agent styles
