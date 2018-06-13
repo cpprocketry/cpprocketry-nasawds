@@ -63,6 +63,7 @@ $z-index-nav:     9000;
   font-style: normal;
   font-weight: $font-bold;
   margin: 0;
+  letter-spacing: $heading-letter-spacing;
 
   @include media($nav-width) {
     display: block;
