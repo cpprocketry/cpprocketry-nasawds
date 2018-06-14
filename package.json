@@ -1,6 +1,6 @@
 {
   "name": "nasawds",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Open source UI components and visual style guide for NASA websites",
   "engines": {
     "node": ">= 4"

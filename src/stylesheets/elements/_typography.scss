@@ -64,6 +64,12 @@ a {
 
 h1,
 h2,
+.usa-display {
+  letter-spacing: $heading-letter-spacing;
+}
+
+h1,
+h2,
 h3,
 h4,
 h5,
@@ -71,7 +77,6 @@ h6 {
   clear: both;
 
   @include font-smoothing;
-  letter-spacing: $heading-letter-spacing;
   font-family: $helvetica;
   line-height: $heading-line-height;
   margin-bottom: 0.5em;
