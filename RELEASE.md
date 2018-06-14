@@ -164,7 +164,7 @@ Otherwise, proceed with the next versioned release!
 - [ ] In [GitHub releases](https://github.com/nasa/nasawds/releases) select `Draft a new release`
 - [ ] Add the `tag`: `v{{ version }}`
 - [ ] Use `target`: `master`
-- [ ] Add release notes to the body. Use previous release notes as a starting point. https://github.com/nasa/nasawds/releases/edit/v1.4.6
+- [ ] Add release notes to the body. Use previous release notes as a starting point. https://github.com/nasa/nasawds/releases/edit/v2.0.0
 - [ ] Have at least one team member review the release notes
 - [ ] Attach the `zip` binary you just created
 - [ ] Select `Publish release`
