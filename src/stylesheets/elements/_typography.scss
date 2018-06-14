@@ -153,14 +153,21 @@ dfn {
   }
 }
 
+.usa-serif-body {
+  p:not(.usa-font-lead),
+  li {
+    font-family: $font-serif;
+    font-size: $base-font-size - .2rem;
+    line-height: $base-line-height + .2;
+  }
+}
+
 .usa-serif {
   p,
   a,
   li,
   span {
     font-family: $font-serif;
-    font-size: $base-font-size - .2rem;
-    line-height: $base-line-height + .2;
   }
 }
 
@@ -182,6 +189,7 @@ dfn {
   font-weight: 300;
   line-height: $lead-line-height;
   max-width: $lead-max-width;
+  font-family: $font-sans;
 }
 
 .usa-background-dark {

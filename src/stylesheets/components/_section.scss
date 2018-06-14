@@ -11,6 +11,7 @@
 }
 
 .usa-section-dark {
+  @include font-smoothing;
   background-color: $color-base;
   color: $color-white;
 
