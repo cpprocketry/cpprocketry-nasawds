@@ -7,4 +7,4 @@ This repository is for the Design System itself. NASA maintains [another reposit
 
 ## Contributing to the code base
 
-For complete instructions on how to contribute code, please read [CONTRIBUTING.md](CONTRIBUTING.md). These instructions also include guidance on how to set up your own copy of the Design System style guide website for development.
+For complete instructions on how to contribute code, please read [CONTRIBUTING.md](CONTRIBUTING.md). These instructions also include guidance on how to set up your own copy of the Design System style guide website for development. 
