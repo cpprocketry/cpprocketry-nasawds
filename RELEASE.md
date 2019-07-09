@@ -107,7 +107,7 @@ git checkout -b release-{{ version }} origin/develop
 #### Prerelease if necessary
 When releasing potentially disruptive changes, it's good practice to publish pre-releases of planned versions. These are sometimes also called release candidates. Here's how it works:
 
-- [ ] Create a new branch from the release branch (`release-{{ version }}`) with `-pre` as an additional pre-release identifier, i.e. `release-{{ version }-pre`.
+- [ ] Create a new branch from the release branch (`release-{{ version }}`) with `-pre` as an additional pre-release identifier, i.e. `release-{{ version }}-pre`.
 
 Follow the release process for your pre-release branch, with the following modifications:
 
